@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context-3.2.xsd
+http://www.springframework.org/schema/mvc
+https://www.springframework.org/schema/mvc/spring-mvc.xsd">
+    <context:component-scan
+        base-package="com.example" />
+    <bean
+        class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/views/" />
+        <property name="suffix" value=".jsp" />
+    </bean>
+    <mvc:annotation-driven />
+    <mvc:resources mapping="/images/**" location="WEB-INF/resources/images/" />
+    <mvc:resources mapping="/images/product/**" location="WEB-INF/resources/images/product/" />
+    <mvc:resources mapping="/images/banner/**" location="WEB-INF/resources/images/banner/" />
+    <mvc:resources mapping="/images/brand/**" location="WEB-INF/resources/images/brand/" />
+    <mvc:resources mapping="/images/trangthuonghieu/**" location="WEB-INF/resources/images/trangthuonghieu/" />
+    <mvc:resources mapping="/css/**" location="WEB-INF/resources/css/" />
+    <mvc:resources mapping="/js/**" location="WEB-INF/resources/js/" />
+    <mvc:resources mapping="/admincss/**" location="WEB-INF/resources/AdminTemplate/dist/css/" />
+    <mvc:resources mapping="/adminimages/**" location="WEB-INF/resources/AdminTemplate/dist/img/" />
+</beans>
